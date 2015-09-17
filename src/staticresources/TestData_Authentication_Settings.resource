@@ -1,0 +1,4 @@
+Certificate_Name__c,Name,Password__c,UserName__c
+CapIQ_Dev_Client_Certificate,DataPower_CapIQ,master01,DPuser2
+CapIQ_Dev_Client_Certificate,DataPower_RCM,master01,DPuser2
+CapIQ_Dev_Client_Certificate,DataPower_ProbManagement,master01,DPuser2

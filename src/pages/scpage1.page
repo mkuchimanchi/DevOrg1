@@ -1,0 +1,3 @@
+<apex:page standardController="Account" sidebar="false">
+<p>Hello {!Account.Name}! </p>
+</apex:page>

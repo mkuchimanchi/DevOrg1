@@ -1,0 +1,6 @@
+<apex:page controller="customcontroller1">
+<apex:form >
+   Name<apex:inputtext id="inpEmployeeName" value="{!EmployeeName}"/><br/>
+   <apex:CommandButton value="Next" action="{!next}" id="cmdNext" />
+</apex:form>
+</apex:page>

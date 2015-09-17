@@ -1,0 +1,38 @@
+<!-- Using java script in visualforce page -->
+<apex:page controller="DynamicVisualforceController">
+  <apex:form >
+        <apex:pageBlock >
+                    <center>
+                    <apex:outputlabel >Enter Username </apex:outputlabel>&nbsp;&nbsp;&nbsp;
+                    <apex:inputText id="inptID1"/><br/>
+               
+
+                    <apex:outputlabel >Enter Password </apex:outputlabel>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:inputText id="inptID2"/><br/><br/>
+                    <apex:commandButton onclick="MyjavaFunction('{!$Component.inptID1}','{!$Component.inptID2}')" value=" Submit "/>
+                    </center>
+
+
+
+        </apex:pageBlock>
+  </apex:form>
+  
+  <!-- Java script starts Here -->
+  <script>
+   
+   function MyjavaFunction(RecInput1,RecInput2){
+
+    var inputValue1 = document.getElementById(RecInput1).value;
+    var inputValue2 = document.getElementById(RecInput2).value;
+    
+         if(inputValue1 == '') {
+            alert('Username is not entered');
+         } 
+         if(inputValue2 == '') {
+            alert('Password is not entered');
+         } 
+               
+  }
+  </script> 
+   
+</apex:page>

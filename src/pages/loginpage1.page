@@ -1,0 +1,91 @@
+<apex:page controller="loginclass" sidebar="false">
+  <!-- Login Visual force page Begin -->
+  <apex:form >
+        <apex:pageBlock title="Login Page">
+  
+              <apex:outputLabel >Enter Username</apex:outputLabel>&nbsp;&nbsp;&nbsp;
+              <apex:inputText value="{!u_name}" id="inptID1"/>  
+              <apex:outputLabel > (Username should not be greater than 8 chars)</apex:outputLabel><br/> 
+         
+              <br/>
+              <apex:outputLabel >Enter Password</apex:outputLabel>&nbsp;&nbsp;&nbsp;&nbsp;
+              <apex:inputSecret value="{!u_pass}" id="inptID2"/>
+              <apex:outputLabel >&nbsp; (Password must be between 4 to maximum of 12 chars)</apex:outputLabel><br/><br/>
+              <apex:commandButton value="GO" onclick="return valInput('{!$Component.inptID1}','{!$Component.inptID2}')" action="{!login}"/>        
+         
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+              <apex:commandButton value="Register" action="{!register}"/>        
+         
+                
+        
+     </apex:pageBlock>
+     <apex:pageMessages />
+  </apex:form>
+  
+  
+  
+  <script>
+
+         function valInput(RecInput1,RecInput2){
+           
+              
+           var inputValue1 = document.getElementById(RecInput1).value;
+           var inputValue2 = document.getElementById(RecInput2).value;
+           //var passval=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{4,12}$/;
+           var errorFound  = new Boolean(false);
+           
+           if(inputValue1 == '') {
+              alert('Please enter your User Name. ');
+              errorFound = true;
+              
+           }else 
+           if(inputValue1.length > 8) {
+                   alert('Invalid Username.Length should be not greater than 8 chars!!'); 
+                   errorFound = true;
+                   
+           }
+                
+           if(inputValue2 == '') {
+              alert('Please enter your password. ');
+              errorFound = true;
+              
+           }else
+           
+           if(inputValue2.length < 4 || inputValue2.length > 12) {
+              alert('Invalid Password.Length should be atleast 4 chars and not greater than 12 chars!!'); 
+              errorFound = true;
+                   
+           }
+  /*         
+           if(inputValue2.indexOf(invalid) > -1) {
+              alert('Invalid Password.Spaces are not allowed!'); 
+              errorFound = true;
+                   
+           }
+           
+         
+           if(inputValue2.value.match(passval))   {
+              errorFound=false;
+              alert('Hi');
+           }
+           
+           else{
+           
+              alert('Incorrect Password!');
+              alert('Bye');
+              errorFound = true;
+
+           }      
+
+         */  
+           if (errorFound == true) {
+               return false;
+           }  
+           else{
+               return true;
+           }
+                
+         }
+  </script>  
+ </apex:page>

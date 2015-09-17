@@ -1,0 +1,16 @@
+<apex:page standardController="Account" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageMessages >
+  </apex:pageMessages>
+  <apex:pageBlockSection >
+  <apex:inputfield value="{!account.Name}"/>
+  <apex:inputField value="{!account.industry}"/>
+  <apex:CommandButton action="{!Save}" value="Save!"/>
+  </apex:pageBlockSection></apex:pageBlock>
+  </apex:form>
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

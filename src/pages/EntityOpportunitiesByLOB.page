@@ -1,0 +1,59 @@
+<apex:page standardController="Account" extensions="EntityOpportunitiesByRecTypeExt" tabStyle="Account" sidebar="false" showHeader="false">
+   <apex:stylesheet value="{!URLFOR($Resource.BBTStaticResource,'/BBTStaticResource/CSS/BBTCSS.css')}" />
+    
+    <!-- <style>
+        .bPageBlock .pbTitle {
+            vertical-align: middle;
+            color: #222;
+            font-size: 91%;
+            width: 14%;
+            margin: 0;
+        } 
+    </style> --> 
+    <apex:form >
+     <apex:pagemessages ></apex:pagemessages>
+        <!-- Utkarsh Added this to limit the view of the details based on the visibility that the logged in user has. -->
+        <apex:pageBlock rendered="{!IF($ObjectType.Account.accessible && $ObjectType.Opportunity.accessible && hasRecordAccess, false, true)}">
+            <apex:pageMessage severity="error"
+                summary="{!$Label.NoAccesstoEntityorOpportunity}"></apex:pageMessage>
+        </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.Opportunity.LabelPlural}" id="pg"
+            rendered="{!IF($ObjectType.Account.accessible && $ObjectType.Opportunity.accessible && hasRecordAccess, true, false)}">
+               <apex:pageBlockButtons location="top">
+                       <apex:outputPanel >
+                       <apex:outputText value="Filter by Stage: " style="color:#015BA7;" />
+                    <apex:selectList value="{!selectedOppStage}" size="1">
+                        <apex:actionSupport event="onchange"
+                            action="{!getOpportunitiesByStage}" rerender="pg" />
+                        <apex:selectOptions value="{!OppStageOptions}" />
+                          
+               </apex:selectList> 
+                  </apex:outputPanel>
+              /*   <apex:commandButton value="{!IF(countViewAllOpps > 0, 'View All (' + TEXT(countViewAllOpps) + ')', 'View All')}"
+                   onclick="window.open('/apex/EntityOpportunitiesByRecType?accid={!acc.Id}', '_parent')"
+                    style="text-decoration:none;" disabled="{!countViewAllOpps == 0}" />   */
+                    </apex:pageBlockButtons>              
+                  <apex:pageBlockTable value="{!listOppsMain}" var="opp" rows="5">
+                <apex:column headerValue="Action">
+                    <apex:outputLink value="/{!opp.Id}/e?retURL=%2F{!acc.Id}"
+                        target="_top" style="text-decoration:none; color:#015BA7;">Edit
+                    </apex:outputLink>
+                    <apex:outputText value=" | " style="color:gray" />
+                    <apex:outputLink value="{!URLFOR($Action.Opportunity.Delete, opp.Id, [retURL='/' + opp.AccountId])}"
+                        target="_top" style="text-decoration:none; color:#015BA7;">Del</apex:outputLink>
+                </apex:column>                  
+                <apex:column headerValue="Opportunity Name">
+                    <apex:outputLink value="/{!opp.Id}" target="_top">{!opp.Name}
+                </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Stage">
+                    <apex:outputField value="{!opp.StageName}" />
+                </apex:column>
+                <apex:column headerValue="Probability">
+                    <apex:outputField value="{!opp.Probability}" />
+                </apex:column>                              
+          
+          </apex:pageBlockTable>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

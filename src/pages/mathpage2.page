@@ -1,0 +1,24 @@
+<apex:page Controller="Mathclass1" sidebar="false" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:form >
+  <apex:pageBlock title="Mathoperations">
+  <apex:pageBlockSection >
+  <apex:pageBlockSectionItem >
+  <apex:outputLabel >Enter First Value</apex:outputLabel><apex:inputText value="{!num1}" />
+  </apex:pageBlockSectionItem><br/>
+  <apex:pageBlockSectionItem >
+  <apex:outputLabel >Enter Second Value</apex:outputLabel><apex:inputText value="{!num2}"/>
+  </apex:pageBlockSectionItem><br/>
+  <apex:pageBlockSectionItem >
+  <apex:CommandButton value="RESULT"/> <br/>
+  </apex:pageBlockSectionItem>
+  <apex:pageBlockSectionItem >
+  <apex:outputLabel >Result ADD Value</apex:outputLabel><apex:outputText value="{!res}" />
+  </apex:pageBlockSectionItem>
+  <apex:pageBlockSectionItem >
+  <apex:outputLabel >Result SUB Value</apex:outputLabel><apex:outputText value="{!diff}" />
+  </apex:pageBlockSectionItem>
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

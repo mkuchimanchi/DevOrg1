@@ -1,0 +1,45 @@
+<apex:page sidebar="false" controller="Regisclass">
+  <!-- Begin Default Content REMOVE THIS <!--  <html><body style="word-spacing:1em"> > -->
+  <apex:PageMessages ></apex:PageMessages>
+  <apex:form >
+  <apex:pageBlock title="Registration Page">
+    
+    <apex:pageBlockSection >
+       <apex:pageBlockSectionItem >
+          <apex:outputLabel >Account or ATM Card Number</apex:outputLabel><apex:inputText value="{!acct_nbr}"/>
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+          <apex:outputLabel >Emailaddress</apex:outputLabel><apex:inputText value="{!email_id}"/>
+       </apex:pageBlockSectionItem>
+
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Firstname</apex:outputLabel><apex:inputText value="{!fname}"/>   
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Lastname</apex:outputLabel><apex:inputText value="{!lname}"/>
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel > Home Phone number</apex:outputLabel><apex:inputText value="{!hphone}"/>
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Secret Question</apex:outputLabel><apex:inputText value="{!squestion}"/>
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Secret Answer</apex:outputLabel><apex:inputText value="{!sanswer}"/>
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Select Username</apex:outputLabel><apex:inputText value="{!uname}"/>
+       </apex:pageBlockSectionItem>
+
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Enter Password</apex:outputLabel><apex:inputText value="{!upass}"/>
+       </apex:pageBlockSectionItem>
+       <apex:pageBlockSectionItem >
+         <apex:outputLabel >Re-Enter Password</apex:outputLabel><apex:inputText value="{!re_pass}"/>  
+       </apex:pageBlockSectionItem>
+       <apex:commandButton value="Register" action="{!register}">
+       </apex:commandButton>
+      </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

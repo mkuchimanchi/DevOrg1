@@ -1,0 +1,18 @@
+<apex:page controller="RerenderNoAction1" showheader="false" sidebar="false" standardStylesheets="false">    
+  <apex:form >          
+    <apex:actionRegion >
+      <apex:selectList value="{!parentOpt}" multiselect="false" size="1">                
+         <apex:selectOptions value="{!parentOptions}"/>                
+         <apex:actionsupport event="onchange" rerender="panel" />            
+      </apex:selectList>        
+    </apex:actionRegion>
+    <br />        
+    <apex:outputPanel id="panel">            
+      Here we are!<br/>         
+      View Count: {!viewMeCnt}<br />                         
+      <apex:selectList value="{!opt}" multiselect="false" size="1" required="true" id="opt">                
+         <apex:selectOptions value="{!options}" />           
+      </apex:selectList>        
+    </apex:outputPanel>            
+  </apex:form>
+</apex:page>

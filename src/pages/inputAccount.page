@@ -1,0 +1,17 @@
+<apex:page standardController="Account" tabStyle="Account">
+ <apex:form >
+    <apex:pageBlock Title="Account Detail">
+       <apex:pageBlockButtons >
+         <apex:commandButton action="{!save}" value="Save"/>
+         <apex:commandButton action="{!quicksave}" value="Save and New"/>
+         <apex:commandButton action="{!cancel}" value="Cancel"/>
+       </apex:pageBlockButtons>
+       
+       <apex:pageBlockSection Title="Account Information" columns="1">
+       <apex:inputField value="{!Account.AccountNumber} "/>
+       <apex:inputfield value="{!Account.name}"/>
+       
+       </apex:pageBlockSection>
+    </apex:pageBlock>
+ </apex:form>
+</apex:page>

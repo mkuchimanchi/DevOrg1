@@ -1,0 +1,22 @@
+<apex:page sidebar="false" showHeader="true" standardStylesheets="false" standardController="Account">
+  <apex:pageBlock >
+  <h1>My Styled Page</h1>
+    <p>Great!</p>
+    <style>
+    body {font-family: Arial Unicode MS;}
+    h1 {color:red;}
+</style>
+<apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css"/>
+  <apex:outputLink value="http://developer.force.com/">Click me!</apex:outputLink>
+  <apex:outputLink value="{! $Page.Hello}">I am me!</apex:outputLink>
+  <apex:pageBlockSection title="Custom Section Title">
+  <apex:pageBlockTable value="{! account.contacts}" var="item">
+  ￼<apex:dataTable value="{!account.contacts}" var="item">
+  ￼
+  </apex:datatable>
+        <apex:outputField value="{!account.Name}"/>
+        <apex:outputField value="{!account.Owner.Name}"/>
+    </apex:pageblocktable>
+    </apex:pageBlockSection>
+   </apex:pageBlock> 
+</apex:page>

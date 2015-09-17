@@ -1,0 +1,37 @@
+<apex:page sidebar="false"  controller="SearchAccount">
+  <!-- Begin Default Content REMOVE THIS -->
+ 
+  <apex:form >
+    <apex:pagemessages />
+    <apex:pageblock title="Bank Account Application" >
+     <apex:pageBlockSection title="Account Search">
+      <apex:pageBlockSectionItem >
+       <apex:outputlabel value="Bank Account Nbr"/><apex:inputtext value="{!bank_acct_nbr}"/>
+       </apex:pageBlockSectionItem> 
+     </apex:pageBlockSection> 
+     <apex:pageBlockButtons >
+       <apex:commandButton value="Search" action="{!searchRecord}" ReRender="searchval"/>
+       <apex:commandButton value="Add" action="{!addRecord}"/>
+     </apex:pageBlockButtons> 
+    </apex:pageblock>
+    <apex:outputPanel id="searchval">
+      <apex:pageBlock title="Result Block" rendered="{!accountfound}">
+         <apex:outputLabel value="Bank Account Name : " />&nbsp;&nbsp;
+         <apex:outputText value="{!acct_name}"/><br/>
+         <apex:outputLabel value="Bank Account Number : " /> &nbsp;
+         <apex:outputText value="{!bank_acct_nbr}"/><br/>
+         <apex:outputLabel value="Account Balance : " />&nbsp;&nbsp;
+         <apex:outputText value="{!bank_acct_bal}"/>
+  
+         <apex:pageBlockButtons >
+           <apex:commandLink value="Withdraw" action="{!withdraw}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+           <apex:commandLink value="Deposit" action="{!deposit}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+           <apex:commandLink value="Transactions History" action="{!trxhistory}"/>
+         </apex:pageBlockButtons>
+     </apex:pageBlock>
+     <apex:pageBlock rendered="{!accountfound == false}"><apex:pagemessages /></apex:pageBlock>
+   </apex:outputpanel>
+  </apex:form>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

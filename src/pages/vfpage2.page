@@ -1,0 +1,3 @@
+<apex:page controller="customcontroller1">
+   .The employee name is {!EmployeeName}
+</apex:page>

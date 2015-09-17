@@ -1,0 +1,22 @@
+<apex:page sidebar="false"  controller="SearchAccount">
+  <!-- Begin Default Content REMOVE THIS -->
+ 
+  <apex:form >
+    <apex:pageblock title="Deposit Bank Account Application" >
+     <apex:pageBlockSection title="Deposit Amount">
+      <apex:pageBlockSectionItem >
+       <apex:outputlabel value="Bank Account Nbr"/><apex:outputtext value="{!bank_acct_nbr}"/>
+      </apex:pageBlockSectionItem> 
+      <apex:pageBlockSectionItem >
+       <apex:outputlabel value="Deposit Amount"/><apex:inputtext value="{!amount}"/>
+      </apex:pageBlockSectionItem>  
+       <apex:commandButton value="Deposit" action="{!depositAmt}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+       <apex:commandButton value="Back" action="{!back}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+       <apex:commandButton value="Trasaction History" action="{!trxhistory}"/>
+     </apex:pageBlockSection>  
+    </apex:pageblock>
+    
+  </apex:form>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

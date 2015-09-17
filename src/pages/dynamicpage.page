@@ -1,0 +1,9 @@
+<apex:page sidebar="false" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <p> User First and Last name:  {! $user.firstname & ' ' & $user.lastname} </p>
+  <p> Today's Date is {! Today()} </p>
+  <p> Next week's Date is {! Today() + 7} </p>
+  <p> The Year today is {! Year(Today())} </p>
+  <p> Tomorrow will be day number {! Day(Today() +1)} </p>
+  {! IF (DAY(TODAY()) > 14 ,'After the 14th' , 'On or before 14th')}
+</apex:page>

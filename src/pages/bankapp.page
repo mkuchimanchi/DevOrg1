@@ -1,0 +1,26 @@
+<apex:page sidebar="false"  controller="BankCC">
+  <!-- Begin Default Content REMOVE THIS -->
+ 
+  <apex:form >
+    <apex:pageblock title="Bank Account Application" >
+     <apex:pageBlockSection title="Account Search">
+      <apex:pageBlockSectionItem >
+       <apex:outputtext value="{!bank_acct_nbr}"/><apex:inputtext />
+       </apex:pageBlockSectionItem> 
+       <apex:commandButton value="Search" action="{!searchRecord}"/>
+       <apex:commandButton value="Add" action="{!addRecord}"/>
+     </apex:pageBlockSection>  
+    </apex:pageblock>
+    <apex:pageBlock title="Result Block">
+      <apex:outputLabel value="Bank Account Name : " />&nbsp;&nbsp;
+     <apex:outputText value="{!acct_name}"/><br/>
+     <apex:outputLabel value="Bank Account Number : " /> &nbsp;
+     <apex:outputText value="{!bank_acct_nbr}"/><br/>
+     <apex:outputLabel value="Account Balance : " />&nbsp;&nbsp;
+     <apex:outputText value="{!bank_acct_bal}"/>
+   </apex:pageBlock>
+
+  </apex:form>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>NetDocuments home page</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <icon>NetDocuments/NDIcon.gif</icon>
+    <label>NetDocuments</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom219: TV Widescreen</motif>
+    <url>https://vault.netvoyage.com/neWeb2/docCent.aspx?sfSession={!API.Session_ID}&amp;sfUrl={!API.Partner_Server_URL_70}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

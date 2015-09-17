@@ -1,0 +1,22 @@
+<apex:page sidebar="false"  controller="SearchAccount">
+  <!-- Begin Default Content REMOVE THIS -->
+ 
+  <apex:form >
+    <apex:pageblock title="Withdraw Amount  Bank Application" >
+     <apex:pageBlockSection title="Withdraw Amount">
+      <apex:pageBlockSectionItem >
+       <apex:outputlabel value="Bank Account Nbr"/><apex:outputtext value="{!bank_acct_nbr}"/>
+      </apex:pageBlockSectionItem> 
+      <apex:pageBlockSectionItem >
+       <apex:outputlabel value="Withdraw Amount"/><apex:inputtext value="{!amount}"/>
+      </apex:pageBlockSectionItem>  
+       <apex:commandButton value="Withdraw" action="{!withdrawAmt}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+       <apex:commandButton value="Back" action="{!back}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+       <apex:commandButton value="Trasaction History" action="{!trxhistory}"/>
+     </apex:pageBlockSection>  
+    </apex:pageblock>
+    
+  </apex:form>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

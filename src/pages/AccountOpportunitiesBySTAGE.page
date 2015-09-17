@@ -1,0 +1,71 @@
+<!--
+*--------------------------------BB&T SFDC Project----------------------------------------------
+* @Name             AccountOpportunitiesBySTAGE
+* @author           Karthik
+* @date             10-Oct-2012
+* @description      This page is used the display the Account's Opportunities filtered by Stage.
+*                     
+* ----------------------------------------------------------------------------------------------
+* Modification Log:
+* ----------------------------------------------------------------------------------------------
+* Developer                      Date                    Description                 
+* ---------                      ----                    -----------                 
+* Madhav Kuchimanchi             10-Oct-2012             Created           
+* ----------------------------------------------------------------------------------------------
+* Review Log:
+* ----------------------------------------------------------------------------------------------
+* Reviewer                       Review Date             Review Comments
+* --------                       -----------             ---------------
+* 
+*-----------------------------------------------------------------------------------------------
+-->
+<apex:page standardcontroller="Account" extensions="AccountOpportunitiesByStageExt" 
+    tabStyle="Account" sidebar="false" showHeader="false">
+    <style>
+        .bPageBlock .pbTitle {
+            vertical-align: middle;
+            color: #222;
+            font-size: 91%;
+            width: 14%;
+            margin: 0;
+        }
+    </style>
+    <apex:form >   
+    <apex:pagemessages ></apex:pagemessages>
+        <apex:pageBlock title="{!$ObjectType.Opportunity.LabelPlural}" id="pg">   
+            <apex:pageBlockButtons location="top">
+                <apex:commandLink action="{!newOpportunityRedirect}" value="New Opportunity" target="_top" 
+                    styleClass="btn" style="text-decoration:none;"/> &nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:outputPanel >
+                    <apex:outputText value="Filter by Opportunity Stages: " style="color:#015BA7;"/>
+                    <apex:selectList value="{!selectedStage}" size="1">
+                        <apex:actionSupport event="onchange" action="{!getOpportunitiesByStage}" reRender="pg"/>
+                        <apex:selectOptions value="{!stageOptions}"/>
+                    </apex:selectList>
+                </apex:outputPanel>             
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!listOpps}" var="opp" rows="5">
+                <apex:column headerValue="Action">
+                    <apex:outputLink value="/{!opp.Id}/e?retURL=%2F{!acc.Id}" target="_top" 
+                        style="text-decoration:none; color:#015BA7;">Edit
+                    </apex:outputLink> 
+                    <apex:outputText value=" | " style="color:gray"/>
+                    <apex:outputLink value="{!URLFOR($Action.Opportunity.Delete, opp.Id, [retURL='/' + opp.AccountId])}" 
+                        target="_top" style="text-decoration:none; color:#015BA7;">Del</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Opportunity Name">
+                    <apex:outputLink value="/{!opp.Id}" target="_top">{!opp.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Stage">
+                    <apex:outputField value="{!opp.StageName}"/>
+                </apex:column>
+                <apex:column headerValue="Amount">
+                   <apex:outputField value="{!opp.Amount}"/>
+                </apex:column>
+                <apex:column headerValue="Close Date">
+                    <apex:outputField value="{!opp.CloseDate}"/>
+                </apex:column>
+             </apex:pageBlockTable><br></br>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

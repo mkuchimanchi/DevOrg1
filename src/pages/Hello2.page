@@ -1,0 +1,23 @@
+<apex:page standardController="Account" sidebar="false" showheader="true" >
+    <apex:pageBlock title="This is a block">
+        <apex:pageBlockSection title="This is a Section">
+             <apex:pageBlockTable value="{! account.contacts}" var="item">
+        <apex:column value="{! item.name}"/>  
+        </apex:pageBlockTable>   
+           <apex:pageBlockSection title="i am a second section">
+            </apex:pageBlockSection>            <p>Here's the Ticker Symbol field: {! account.TickerSymbol}</p>
+                        <apex:detail />
+                        <apex:relatedList List="cases"/>
+                        <apex:outputField value="{!account.name}"/>
+            
+            {! $User.FirstName}
+            {! $user.LastName}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="This is a 2nd block">
+    </apex:pageblock>
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

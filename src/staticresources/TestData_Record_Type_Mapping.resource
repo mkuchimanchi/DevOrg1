@@ -1,0 +1,7 @@
+Child_Object_Id__c,Child_Object_Key__c,Child_Rec_Type_ID__c,Name,Parent_Lookup_ID__c,Parent_Object_Key__c,Parent_Object_Name__c,VF_Page_Name__c
+01Id00000010qFd,a0R,012d0000000XGjG,Account To COI,00Nd0000007Fs84,1,Account,RecordTypeRedirectCOI
+01Id00000010qFd,a0R,012d0000000XGjI,Opportunity to COI,00Nd0000007Fs88,6,Opportunity,RecordTypeRedirectCOI
+01Id00000010qFd,a0R,012d0000000XGjH,Lead To COI,00Nd0000007Fs86,00Q,Lead,RecordTypeRedirectCOI
+01Id00000010qFd,a0R,012d0000000XGjJ,Referral To COI,00Nd0000007Fs8A,a0U,Referral__c,RecordTypeRedirectCOI
+01Id00000010qFe,a0S,012d0000000XGjK,Account To Competitor,00Nd0000007Fs8C,1,Account,RecordTypeRedirectComp
+01Id00000010qFe,a0S,012d0000000XGjL,Opportunity To Competitor,00Nd0000007Fs8I,6,Opportunity,RecordTypeRedirectComp

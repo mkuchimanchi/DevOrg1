@@ -1,0 +1,8 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css"/>
+    <h1>My Fancy Site</h1>
+    <apex:insert name="body"/>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,44 @@
+<apex:page sidebar="false" tabstyle="Account">
+  <!-- Begin Default Content REMOVE THIS -->
+<apex:form >
+  <apex:pageBlock title="block1">
+  <apex:pageBlockButtons >
+  <apex:commandLink value="Save"/>
+  <apex:commandButton value="Save&New"/>
+  <apex:commandButton value="Cancel"/>
+  </apex:pageBlockButtons>
+  <apex:pageBlockSection >
+  First section
+<apex:pageBlockSectionItem >
+course name<apex:inputText />
+</apex:pageBlockSectionItem>  
+<apex:pageBlockSectionItem >
+Fast track<apex:inputCheckbox />
+</apex:pageBlockSectionItem>  
+<apex:pageBlockSectionItem >
+Course fees<apex:inputSecret />
+</apex:pageBlockSectionItem>  
+<apex:pageBlockSectionItem >
+Course duration<apex:inputtext />
+</apex:pageBlockSectionItem>  
+  </apex:pageBlockSection>
+  
+  <apex:pageBlockSection >
+  Second section
+  
+  </apex:pageBlockSection>
+  <apex:pageBlockSection >
+  Third section
+  
+  </apex:pageBlockSection>
+  <apex:pageBlockSection >
+  Fourth section
+  
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+   <apex:pageBlock title="block2" >
+  </apex:pageBlock>
+  This is your new Page: demopage2
+  <!-- End Default Content REMOVE THIS -->
+</apex:form>
+</apex:page>

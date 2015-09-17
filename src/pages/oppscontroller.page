@@ -1,0 +1,15 @@
+<apex:page controller="OppsController">
+  <apex:form >
+      <apex:dataTable value="{!Opportunities}" var="oppWrapped">
+          <apex:column >
+              <apex:facet name="header">Opportunity</apex:facet>
+              <apex:outputField value="{!oppWrapped.name}"/>
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">Amount</apex:facet>
+              <apex:inputField value="{!oppWrapped.amount}"/>
+              
+          </apex:column>
+      </apex:dataTable>
+  </apex:form>
+</apex:page>

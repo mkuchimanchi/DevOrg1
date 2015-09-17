@@ -1,0 +1,10 @@
+<apex:page sidebar="false" controller="loginclass1">
+  <h1>Congratulations ! Registration is complete.Please click Go Button  to login into Website. </h1>
+  <apex:form >
+  <apex:pageBlock >
+    <apex:commandButton value="Go" action="{!login}"/>
+  </apex:pageBlock>
+  
+  </apex:form>
+  
+</apex:page>

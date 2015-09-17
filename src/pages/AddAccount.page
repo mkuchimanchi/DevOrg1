@@ -1,0 +1,47 @@
+<apex:page sidebar="false"  controller="AddAccount">
+  <!-- Begin Default Content REMOVE THIS -->
+  
+  <apex:form >
+    <apex:pageblock title="Bank Account Application" >
+    
+     <apex:pageBlockSection title="New Account Add">
+      <apex:pageBlockSectionItem >
+       <apex:outputLabel value="Bank Account nbr "></apex:outputLabel>
+       <apex:inputtext value="{!bank_acct_nbr}"/>
+      </apex:pageBlockSectionItem> 
+      <apex:pageBlockSectionItem >
+       <apex:outputLabel value="Bank Account name "></apex:outputLabel>
+       <apex:inputtext value="{!bank_acct_name}"/>
+      </apex:pageBlockSectionItem> 
+      <apex:pageBlockSectionItem >
+       <apex:outputLabel value="Bank Account Balance "></apex:outputLabel>
+       <apex:inputtext value="{!bank_acct_bal}"/>
+      </apex:pageBlockSectionItem>   
+      <apex:pageBlockSectionItem >
+       <apex:outputLabel value="Account holder Name"></apex:outputLabel>
+       <apex:inputtext value="{!acct_name}"/>
+      </apex:pageBlockSectionItem>         
+      <apex:commandButton value="Add" action="{!addRecord}" reRender="result"/>
+      <apex:commandButton value="Back" action="{!back}"/>
+     </apex:pageBlockSection>  
+    </apex:pageblock>
+    <apex:outputPanel id="result">
+       <apex:pageBlock title="Result Block" rendered="{!acctexist}">
+          <apex:outputLabel value="Bank Account Added: " />&nbsp;&nbsp;
+          <apex:outputLabel value="Bank Account Name : " />&nbsp;&nbsp;
+          <apex:outputText value="{!bank_acct_name}"/><br/>
+          <apex:outputLabel value="Bank Account Number : " /> &nbsp;
+          <apex:outputText value="{!bank_acct_nbr}"/><br/>
+          <apex:outputLabel value="Account Balance : " />&nbsp;&nbsp;
+          <apex:outputText value="{!bank_acct_bal}"/>
+       </apex:pageBlock>
+       <apex:pageblock rendered="{!acctexist == false}">
+       <apex:pageMessages />
+       </apex:pageblock>
+       
+   </apex:outputPanel>
+
+  </apex:form>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

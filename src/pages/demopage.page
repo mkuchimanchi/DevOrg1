@@ -1,0 +1,32 @@
+<apex:page sidebar="false" showHeader="true">
+<apex:pageBlock title="A block title"> 
+    <apex:pageBlockSection title="A block section">
+        <apex:pageBlockSectionItem >
+            Block section item1
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            Block section item2
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            Block section item3
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            Block section item4
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection> 
+    <apex:pageBlockSection title="Another block section">
+     <apex:pageBlockSectionItem >
+            Another Block section item1
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            Another Block section item2
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            Another Block section item3
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            Another Block section item4
+        </apex:pageBlockSectionItem>    
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

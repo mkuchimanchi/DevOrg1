@@ -1,0 +1,34 @@
+<apex:page sidebar="false" tabstyle="Job_Application__c" title="Courses">
+  <apex:form >
+    <apex:pageblock Title="Course Edit">
+      <apex:pageblockButtons location="top">
+          <apex:commandButton value="Save"/>
+          <apex:commandButton value="Save & New"/>
+          <apex:commandButton value="Cancel"/>
+      </apex:pageblockButtons>
+      <apex:pageBlockSection title="Information" collapsible="false">
+          <apex:pageBlockSectionItem >
+            <apex:outputtext value="Course ID"/><apex:inputtext required="true"/>
+          </apex:pageBlockSectionItem>
+          <apex:pageBlockSectionItem >
+            <apex:outputText value="Owner"></apex:outputText>
+            <apex:outputText value="{!$User.FirstName} {!$User.LastName}"></apex:outputText>
+          </apex:pageBlockSectionItem>
+       
+          <apex:pageBlockSectionItem >
+            <apex:outputtext value="Duration in Days"/><apex:inputText required="true"/>
+          </apex:pageBlockSectionItem><br></br>
+          <apex:pageBlockSectionItem >
+            <apex:outputtext value="Course name"/><apex:inputText required="true" />                  
+          </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      <apex:pageblockButtons location="bottom">
+          <apex:commandButton value="Save"/>
+          <apex:commandButton value="Save & New"/>
+          <apex:commandButton value="Cancel"/>
+      </apex:pageblockButtons>
+    </apex:pageblock>
+
+  </apex:form>
+
+</apex:page>

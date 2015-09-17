@@ -1,0 +1,23 @@
+<apex:page sidebar="false"  controller="SearchAccount1">
+<apex:form >
+    <apex:pageblock title="Bank Account Application" >
+     <apex:pageBlockSection title="Account Search">
+      <apex:pageBlockSectionItem >
+       <apex:outputlabel value="Bank Account Nbr"/><apex:inputtext value="{!bank_acct_nbr}"/>
+       </apex:pageBlockSectionItem> 
+       <apex:commandButton value="Search" action="{!searchRecord}"/>
+     </apex:pageBlockSection>  
+    </apex:pageblock>
+    <apex:pageBlock title="Result Block">
+      <apex:outputLabel value="Bank Account Name : " />&nbsp;&nbsp;
+     <apex:outputText value="{!bank_acct_name}"/><br/>
+     <apex:outputLabel value="Bank Account Number : " /> &nbsp;
+     <apex:outputText value="{!bank_acct_nbr}"/><br/>
+     <apex:outputLabel value="Account Balance : " />&nbsp;&nbsp;
+     <apex:outputText value="{!bank_acct_bal}"/>
+   </apex:pageBlock>
+
+  </apex:form>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

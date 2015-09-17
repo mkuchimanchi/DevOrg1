@@ -1,0 +1,24 @@
+<apex:page sidebar="false" controller="SearchAccount">
+  <apex:form >
+    <apex:pageBlock >
+      <apex:pageBlockTable var="tran" value="{!trans}" border="1"> 
+         <apex:column headerValue="Bank Account number">
+           <apex:outputtext value="{!tran.bank_acct_nbr__c}"/>
+         </apex:column>
+         <apex:column headerValue="Amount">
+           <apex:outputtext value="{!tran.amount__c}"/>
+         </apex:column>
+         <apex:column headerValue="Date of Transactions">
+           <apex:outputtext value="{!tran.tran_date__c}"/>
+         </apex:column>
+         <apex:column headerValue="Type of Transaction">
+           <apex:outputtext value="{!tran.tran_type__c}"/>
+         </apex:column>
+       </apex:pageBlockTable>
+       <apex:pageBlockButtons >
+         <apex:commandLink value="Back" action="{!back}"/>
+       </apex:pageBlockButtons>
+    </apex:pageBlock>
+    
+  </apex:form>
+</apex:page>

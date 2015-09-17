@@ -1,0 +1,28 @@
+<apex:page controller="loginclass" sidebar="false">
+  <!-- Login Visual force page Begin -->
+  <apex:includeScript value="{!$Resource.example_js}"/>
+  <apex:form >
+    <apex:pageBlock title="Login Page">
+      <apex:pageBlockSection >
+         <apex:pageBlockSectionItem >
+            <apex:outputLabel >Enter Username</apex:outputLabel><apex:inputText value="{!u_name}"/>
+         </apex:pageBlockSectionItem>       
+         <apex:outputLabel > (Username must be maximum of eight chars)</apex:outputLabel>  
+         <apex:pageBlockSectionItem >
+            <apex:outputLabel >Enter Password</apex:outputLabel><apex:inputSecret value="{!u_pass}"/>
+         </apex:pageBlockSectionItem>
+         <apex:outputLabel > (Password must be maximum of 12 chars and must contain atleast one number)</apex:outputLabel>
+         <apex:pageBlocksectionItem ><br/>
+            
+            <apex:commandButton value="GO" onclick="CheckPassword({!u_pass}" action="{!login}" />        
+         </apex:pageBlocksectionItem>
+         
+         <apex:pageBlocksectionItem >
+            <apex:commandButton value="Register" action="{!register}"/>        
+         </apex:pageBlocksectionItem>
+                
+        </apex:pageBlockSection>
+     </apex:pageBlock>
+     <apex:pageMessages />
+  </apex:form>
+</apex:page>
