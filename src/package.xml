@@ -151,28 +151,7 @@
         <members>Project_Management_Folder/LPM1_Starter_Project.xml</members>
         <members>Project_Management_Folder/Starter_Project_LPM1a.xml</members>
         <name>Document</name>
-    </types>
-    <types>
-        <members>unfiled$public</members>
-        <members>unfiled$public/Large_Invoice_Template</members>
-        <members>unfiled$public/MarketingProductInquiryResponse</members>
-        <members>unfiled$public/Recruiting_App</members>
-        <members>unfiled$public/Recruiting_App_New_Position_Requires_Approval</members>
-        <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
-        <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
-        <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</members>
-        <members>unfiled$public/SalesNewCustomerEmail</members>
-        <members>unfiled$public/Sample</members>
-        <members>unfiled$public/SupportCaseAssignmentNotification</members>
-        <members>unfiled$public/SupportCaseCreatedPhoneInquiries</members>
-        <members>unfiled$public/SupportCaseCreatedWebInquiries</members>
-        <members>unfiled$public/SupportCaseResponse</members>
-        <members>unfiled$public/SupportEscalatedCaseNotification</members>
-        <members>unfiled$public/SupportEscalatedCaseReassignment</members>
-        <members>unfiled$public/SupportSelfServiceNewLoginandPassword</members>
-        <members>unfiled$public/SupportSelfServiceResetPassword</members>
-        <name>EmailTemplate</name>
-    </types>
+    </types>   
     <types>
         <members>Case.Rule1</members>
         <members>Case.Standard</members>
@@ -235,11 +214,7 @@
     </types>
     <types>
         <members>MerchandiseReports</members>
-        <members>Merchandise_Reports</members>
-        <members>Merchandise_Reports/All_Merchandise_with_Price_and_Inventory</members>
-        <members>Merchandise_Reports/Daily_Units_Sold_by_Invoice_Status</members>
-        <members>Merchandise_Reports/Merchand_Sum_rep_by_Invoice_No_Price</members>
-        <members>Merchandise_Reports/Merchandise_report</members>
+        <members>Merchandise_Reports</members>        
         <members>Milestone_Project_Management</members>
         <members>Milestone_Project_Management/Milestone_Task_Expenses_Summary</members>
         <members>Milestone_Project_Management/Milestone_Times_Summary</members>
